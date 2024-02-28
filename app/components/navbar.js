@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="w-full z-20 h-20 bg-transparent sticky">
+      <div className="w-full z-20 h-10 pt-2 bg-transparent sticky">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <h1 className='font-medium'>
