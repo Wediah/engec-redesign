@@ -142,7 +142,7 @@ function Navbar() {
                                 href="/blog"
                                 className="cursor-pointer hover:text-yellow-300 text-black block px-3 py-2 rounded-md  font-bold text-left dark:text-white text-6xl"
                             >
-                                Blog
+                                CONTACT
                             </Link>
                             
                             
