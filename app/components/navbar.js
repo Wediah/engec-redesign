@@ -139,7 +139,7 @@ function Navbar() {
                             </Link>
                             <Link
                             onClick={() => setIsOpen(!isOpen)}
-                                href="/blog"
+                                href="/contact"
                                 className="cursor-pointer hover:text-yellow-300 text-black block px-3 py-2 rounded-md  font-bold text-left dark:text-white text-6xl"
                             >
                                 CONTACT
