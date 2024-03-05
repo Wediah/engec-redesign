@@ -19,21 +19,21 @@ export default function Home() {
       <p className="text-black font-bold">
       APPROACHES, WE FACTOR IN ALL YOUR NEEDS AND PRESENT YOU AN EXPERIENCE THAT FITS YOUR IMAGINATION WHETHER IT BEING A UNIQUE LANSCAPE, A BUSTLING CITY SCENARIO OR THE LIVELY PEOPLE AND THEIR MOVEMENTS. 
       </p>
-      <div className="flex gap-3">
-        <div className="h-44 w-40">
-          <Image src="/Eastern1.webp" layout="fill" objectFit="cover"/>
+      <div className="flex gap-3 h-3/5">
+        <div className="">
+          <Image src="/Eastern1.webp" width="160" height="1440" />
         </div>
-        <div className="h-96">
+        <div className="">
           <p className="font-bold bottom-0">READ ABOUT US</p>
         </div>
         <div>
-          <Image src="/Eastern2.webp" width="160" height="500"/>
+          <Image src="/Eastern2.webp" width="160" height="1440"/>
         </div>
         <div>
-          <Image src="/Eastern3.webp" width="160" height="500"/>
+          <Image src="/Eastern3.webp" width="160" height="1440"/>
         </div>
         <div>
-          <Image src="/Eastern6.webp" width="160" height="500"/>
+          <Image src="/Eastern6.webp" width="160" height="1440"/>
         </div>
       </div>
       </div>
