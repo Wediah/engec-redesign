@@ -21,7 +21,7 @@ export default function Home() {
       </p>
       <div className="flex gap-3 h-3/5">
         <div className="">
-          <Image src="/Eastern1.webp" width="160" height="1440" />
+          <Image src="/Eastern1.webp" width="500" height="1440" />
         </div>
         <div className="">
           <p className="font-bold bottom-0">READ ABOUT US</p>
