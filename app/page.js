@@ -12,11 +12,11 @@ export default function Home() {
 
     <div className="bg-white text-black pt-3">
       <div className=" px-4 m-6">
-      <div className="justify-between flex">
+      <div className="justify-between flex text-lg">
         <p className="text-gray-500">OUR APPROACH</p>
         <p className="font-bold">WITH RESEARCH-DRIVEN</p>
       </div>
-      <p className="text-black font-bold">
+      <p className="text-black font-bold text-lg">
       APPROACHES, WE FACTOR IN ALL YOUR NEEDS AND PRESENT YOU AN EXPERIENCE THAT FITS YOUR IMAGINATION WHETHER IT BEING A UNIQUE LANSCAPE, A BUSTLING CITY SCENARIO OR THE LIVELY PEOPLE AND THEIR MOVEMENTS. 
       </p>
       <div className="flex gap-3 h-3/5">
