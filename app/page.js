@@ -19,7 +19,7 @@ export default function Home() {
       <p className="text-black font-bold md:text-4xl text-xl">
       APPROACHES, WE FACTOR IN ALL YOUR NEEDS AND PRESENT YOU AN EXPERIENCE THAT FITS YOUR IMAGINATION WHETHER IT BEING A UNIQUE LANSCAPE, A BUSTLING CITY SCENARIO OR THE LIVELY PEOPLE AND THEIR MOVEMENTS.
       </p>
-      <div className="flex  gap-3 ">
+      <div className="flex gap-3">
       <div className="w-1/4">
           <Image src="/Eastern2.webp" className="w-auto h-96 object-cover" width="160" height="1440"/>
         </div>
