@@ -10,7 +10,7 @@ export default function Home() {
         <h4 className='text-xl text-gray-100 pb-2 font-bold'>WE BUILD STORIES, NOT JUST STRUCTURES.</h4>  
     </div>
 
-    <div className="bg-white text-black pt-3 pb-3">
+    <div className="bg-white text-black py-3">
       <div className=" px-4 m-6">
       <div className="justify-between flex md:text-4xl text-xl ">
         <p className="text-gray-500">OUR APPROACH</p>
@@ -35,6 +35,10 @@ export default function Home() {
         </div>
       </div>
       </div>
+    </div>
+
+    <div className="bg-white text-black py-3">
+
     </div>
 
 
