@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="  mx-auto ">
+    <main className=" ">
 
     <div className='text-center pt-36 pb-56 bg-no-repeat pl-4 bg-cover bg-center bg-black px-4 m-6' style={{ backgroundImage: 'url(Aburi1.jpg)'}}>
         <h1 className='text-7xl lg:text-9xl font-black text-white'>ENGEC GROUP</h1>
