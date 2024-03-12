@@ -10,30 +10,28 @@ export default function Home() {
         <h4 className='text-xl text-gray-100 pb-2 font-bold'>WE BUILD STORIES, NOT JUST STRUCTURES.</h4>  
     </div>
 
-    <div className="bg-white text-black pt-3">
+    <div className="bg-white text-black pt-3 pb-3">
       <div className=" px-4 m-6">
-      <div className="justify-between flex text-lg">
+      <div className="justify-between flex md:text-4xl text-xl">
         <p className="text-gray-500">OUR APPROACH</p>
         <p className="font-bold">WITH RESEARCH-DRIVEN</p>
       </div>
-      <p className="text-black font-bold text-lg">
-      APPROACHES, WE FACTOR IN ALL YOUR NEEDS AND PRESENT YOU AN EXPERIENCE THAT FITS YOUR IMAGINATION WHETHER IT BEING A UNIQUE LANSCAPE, A BUSTLING CITY SCENARIO OR THE LIVELY PEOPLE AND THEIR MOVEMENTS
+      <p className="text-black font-bold md:text-4xl text-xl">
+      APPROACHES, WE FACTOR IN ALL YOUR NEEDS AND PRESENT YOU AN EXPERIENCE THAT FITS YOUR IMAGINATION WHETHER IT BEING A UNIQUE LANSCAPE, A BUSTLING CITY SCENARIO OR THE LIVELY PEOPLE AND THEIR MOVEMENTS.
       </p>
-      <div className="flex gap-3 h-3/5">
-        <div className="">
-          <Image src="/Eastern1.webp" width="500" height="1440" />
+      <div className="flex  gap-3 ">
+      <div className="w-1/4">
+          <Image src="/Eastern2.webp" className="w-auto h-96 object-cover" width="160" height="1440"/>
         </div>
-        <div className="">
-          <p className="font-bold bottom-0">READ ABOUT US</p>
+        <div className=" bg-gray-100 w-1/4 h-96 relative">
+          <a className="font-bold p-2 cursor-pointer hover:underline absolute bottom-0 left-0 right-0 pt-80">READ ABOUT US</a>
         </div>
-        <div>
-          <Image src="/Eastern2.webp" width="160" height="1440"/>
+        
+        <div className="w-1/4">
+          <Image src="/Eastern3.webp" className="w-auto h-96 object-cover" width="160" height="1440"/>
         </div>
-        <div>
-          <Image src="/Eastern3.webp" width="160" height="1440"/>
-        </div>
-        <div>
-          <Image src="/Eastern6.webp" width="160" height="1440"/>
+        <div className="w-1/4">
+          <Image src="/Eastern6.webp" className="w-auto h-96 object-cover" width="160" height="1440"/>
         </div>
       </div>
       </div>
