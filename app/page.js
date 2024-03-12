@@ -12,7 +12,7 @@ export default function Home() {
 
     <div className="bg-white text-black pt-3 pb-3">
       <div className=" px-4 m-6">
-      <div className="justify-between flex md:text-4xl text-xl">
+      <div className="justify-between flex md:text-4xl text-xl ">
         <p className="text-gray-500">OUR APPROACH</p>
         <p className="font-bold">WITH RESEARCH-DRIVEN</p>
       </div>
