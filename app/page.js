@@ -38,7 +38,7 @@ export default function Home() {
     </div>
 
     <div className="bg-white text-black py-3">
-
+      
     </div>
 
 
