@@ -1,5 +1,11 @@
 import Image from "next/image";
+import { Raleway_Dots } from "next/font/google";
+import Marquee from "react-fast-marquee";
 
+const raleway = Raleway_Dots({ 
+  weight: '400',
+  subsets: ['latin']
+})
 
 export default function Home() {
   return (
@@ -38,6 +44,15 @@ export default function Home() {
     </div>
 
     <div className="bg-white text-black py-3">
+      <div className={raleway.className}>
+        <Marquee className="text-6xl">OUR PROJECTS OUR PROJECTS OUR PROJECTS</Marquee>
+      </div>
+
+      <div className="px-4 m-6">
+        <h1 className="font-bold text-lg">CHECK OUT OUR RECENTLY COMPLETED PROJECTS</h1>
+
+
+      </div>
       
       
     </div>
