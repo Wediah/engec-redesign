@@ -1,13 +1,16 @@
 import Image from "next/image";
 import { Raleway_Dots } from "next/font/google";
 import Marquee from "react-fast-marquee";
+import { getAllProjects } from "../sanity/sanity.query";
 
 const raleway = Raleway_Dots({ 
   weight: '400',
   subsets: ['latin']
 })
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getAllProjects();
+
   return (
     <main className=" ">
 
@@ -45,13 +48,26 @@ export default function Home() {
 
     <div className="bg-white text-black py-3">
       <div className={raleway.className}>
-        <Marquee className="text-6xl">OUR PROJECTS OUR PROJECTS OUR PROJECTS</Marquee>
+        <Marquee className="text-6xl overflow-hidden">OUR PROJECTS OUR PROJECTS OUR PROJECTS</Marquee>
       </div>
 
       <div className="px-4 m-6">
         <h1 className="font-bold text-lg">CHECK OUT OUR RECENTLY COMPLETED PROJECTS</h1>
 
-
+        <div className='flex flex-col md:flex-row flex-wrap gap-3 pb-4' >
+                { projects && projects.slice(0, 4).map((project, index) => {
+                    return (
+                        <a key={index} >
+                            <div  className='mt-10 w-11/12 md:w-80 bg-gray-100 rounded-md p-4'>
+                                <Image src={project.projectImage.images} alt={project.alt} width={200} height={300}/>
+                                <h1 className='text-2xl font-bold'>{project.title}</h1>
+                                <p className='text-sm py-2'>{project.description}</p>               
+                            </div>
+                        </a>
+                    )
+                })
+                }  
+            </div>
       </div>
       
       
