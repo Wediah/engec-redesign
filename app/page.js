@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Raleway_Dots } from "next/font/google";
 import Marquee from "react-fast-marquee";
 import { getAllProjects } from "../sanity/sanity.query";
+import { useNextSanityImage } from "next-sanity-image";
 
 const raleway = Raleway_Dots({ 
   weight: '400',
@@ -10,6 +11,7 @@ const raleway = Raleway_Dots({
 
 export default async function Home() {
   const projects = await getAllProjects();
+  console.log(projects);
 
   return (
     <main className=" ">
@@ -59,7 +61,7 @@ export default async function Home() {
                     return (
                         <a key={index} >
                             <div  className='mt-10 w-11/12 md:w-80 bg-gray-100 rounded-md p-4'>
-                                <Image src={project.projectImage.images} alt={project.alt} width={200} height={300}/>
+                                <Image src={project.projectImage} alt="house" width={200} height={300}/>
                                 <h1 className='text-2xl font-bold'>{project.title}</h1>
                                 <p className='text-sm py-2'>{project.description}</p>               
                             </div>
