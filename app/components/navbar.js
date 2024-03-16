@@ -59,7 +59,7 @@ function Navbar() {
                             aria-expanded="false"
                         > 
                         
-                            <span className="sr-only">Open main menu</span>
+                            <span className="sr-only">Open nav menu</span>
                             {!isOpen ? (
                                 <svg
                                     className="block h-6 w-6"
