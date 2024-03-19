@@ -1,13 +1,12 @@
 import { groq } from 'next-sanity';
 import { client }  from './lib/client';
 
-export async function getAllProjects() {
+export async function getAllReviews() {
   return client.fetch(
     groq`
-    *[_type == "projects"]{ 
+    *[_type == "reviews"]{ 
         title, 
-        description, 
-        ProjectImage {alt, "image": asset->url},
+        description,
     }`
     );
 }
