@@ -5,7 +5,9 @@ import { getAllProjects } from "../sanity/sanity.query";
 import { useNextSanityImage } from "next-sanity-image";
 import { getAllReviews } from "../sanity/sanity1.query"
 import React from "react";
-import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
 
 const raleway = Raleway_Dots({ 
   weight: '400',
@@ -15,13 +17,13 @@ const raleway = Raleway_Dots({
 export default async function Home() {
   const projects = await getAllProjects();
   const reviews = await getAllReviews();
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4
-  }
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 4
+  // }
 
   return (
     <main className=" ">
@@ -94,7 +96,7 @@ export default async function Home() {
       </div>
 
       <div>
-      <Slider {...settings}>
+      {/* <Slider {...settings}> */}
         { reviews && reviews.map((review, index) => {
           return (
             <div key={index}>
@@ -105,7 +107,7 @@ export default async function Home() {
             </div>
           )
         })}
-      </Slider>
+      {/* </Slider> */}
       </div>
       
     </div>
