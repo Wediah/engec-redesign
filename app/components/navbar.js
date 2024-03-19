@@ -22,23 +22,23 @@ function Navbar() {
                 </Link>
             </h1>
 
-            <ul className="hidden md:flex gap-x-4 font-medium text-black relative z-0">
+            <ul className="hidden md:flex gap-x-4 font-medium text-white relative z-0">
                 <li className='hover:bg-gray-200  p-1 rounded-md flex-1'>
                     <Link className={`link ${pathname === '/' ? 'active' : 'bg-gray-200'}`} href="/">
                         <p>HOME</p>
                     </Link>
                 </li>
-                <li className='hover:bg-gray-200 hover:dark:text-white hover:dark:bg-gray-900  p-1 rounded-md flex-1'>
+                <li className='hover:bg-gray-200   p-1 rounded-md flex-1'>
                     <Link className={`link ${pathname === '/about' ? 'active' : 'bg-blue-200'}`} href="/about">
                         <p>ABOUT</p>
                     </Link>
                 </li>
-                <li className='active:bg-gray-200 focus:bg-gray-200 hover:bg-gray-200 hover:dark:text-white hover:dark:bg-gray-900 p-1 rounded-md flex-1'>
+                <li className='active:bg-gray-200 focus:bg-gray-200 hover:bg-gray-200  p-1 rounded-md flex-1'>
                     <Link href="/projects">
                         <p>PROJECTS</p>
                     </Link>
                 </li>
-                <li className='active:bg-gray-200 focus:bg-gray-200 hover:bg-gray-200 hover:dark:text-white hover:dark:bg-gray-900 p-1 rounded-md flex-1'>
+                <li className='active:bg-gray-200 focus:bg-gray-200 hover:bg-gray-200  p-1 rounded-md flex-1'>
                     <Link href="/contact">
                         <p>CONTACT</p>
                     </Link>
