@@ -5,7 +5,7 @@ import { getAllProjects } from "../sanity/sanity.query";
 import { useNextSanityImage } from "next-sanity-image";
 import { getAllReviews } from "../sanity/sanity1.query"
 import React from "react";
-import 
+import Slider from "react-slick";
 
 const raleway = Raleway_Dots({ 
   weight: '400',
@@ -15,6 +15,13 @@ const raleway = Raleway_Dots({
 export default async function Home() {
   const projects = await getAllProjects();
   const reviews = await getAllReviews();
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4
+  }
 
   return (
     <main className=" ">
@@ -84,6 +91,21 @@ export default async function Home() {
     <div className="bg-white">
       <div className="px-4">
       <h1 className="text-black text-center font-bold text-xl md:text-4xl">WHAT OUR CLIENTS SAY ABOUT US</h1>
+      </div>
+
+      <div>
+      <Slider {...settings}>
+        { reviews && reviews.map((review, index) => {
+          return (
+            <div key={index}>
+              <div className="bg-gray-100 p-4 m-6">
+                <h1 className="text-2xl font-bold">{review.name}</h1>
+                <p className="text-sm">{review.review}</p>
+              </div>
+            </div>
+          )
+        })}
+      </Slider>
       </div>
       
     </div>
