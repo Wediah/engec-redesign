@@ -102,7 +102,7 @@ export default async function Home() {
       <h1 className="text-black text-center font-bold text-xl md:text-4xl">WHAT OUR CLIENTS SAY ABOUT US</h1>
       </div>
 
-      <div>
+      <div className="flex">
       {/* <Slider {...settings}> */}
         { reviews && reviews.map((review, index) => {
           return (
