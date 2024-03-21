@@ -4,7 +4,7 @@ import { Raleway_Dots } from "next/font/google";
 import Marquee from "react-fast-marquee";
 import { getAllProjects } from "../sanity/sanity.query";
 import { useNextSanityImage } from "next-sanity-image";
-import { getAllReviews } from "../sanity/sanity1.query"
+import { Reviews } from "../sanity/sanity1.query"
 import React from "react";
 import  ImageUrlBuilder  from "@sanity/image-url";
 import { client, urlFor } from "../sanity/lib/client"
@@ -22,7 +22,7 @@ const builder = ImageUrlBuilder(client);
 
 export default async function Home() {
   const projects = await getAllProjects();
-  const reviews = await getAllReviews();
+  const reviews = await Reviews();
   // const settings = {
   //   dots: true,
   //   infinite: true,
@@ -102,20 +102,7 @@ export default async function Home() {
       <h1 className="text-black text-center font-bold text-xl md:text-4xl">WHAT OUR CLIENTS SAY ABOUT US</h1>
       </div>
 
-      <div className="flex">
-      {/* <Slider {...settings}> */}
-        { reviews && reviews.map((review, index) => {
-          return (
-            <div key={index}>
-              <div className="bg-gray-100 p-4 m-6">
-                <h1 className="text-2xl font-bold">{review.tile}</h1>
-                <p className="text-sm">{review.description}</p>
-              </div>
-            </div>
-          )
-        })}
-      {/* </Slider> */}
-      </div>
+    
       
     </div>
 
