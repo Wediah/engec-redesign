@@ -1,4 +1,5 @@
 import { createClient } from 'next-sanity'
+import  ImageUrlBuilder  from "@sanity/image-url";
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
 
@@ -8,3 +9,5 @@ export const client = createClient({
   projectId,
   useCdn,
 })
+
+export const urlFor = (source) => ImageUrlBuilder(client).image(source);

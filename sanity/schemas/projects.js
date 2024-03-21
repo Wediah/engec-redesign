@@ -20,9 +20,6 @@ export default {
         title: "Project Image",
         type: "image",
         description: "Upload the main image of the project",
-        options: {
-            hotspot: true,
-        },
         },
         
     ],

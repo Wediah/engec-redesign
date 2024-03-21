@@ -7,7 +7,12 @@ export async function getAllProjects() {
     *[_type == "projects"]{ 
         title, 
         description, 
-        ProjectImage {alt, "image": asset->url},
+        ProjectImage {
+          asset->{
+            _id,
+            url
+          },
+        },
     }`
     );
 }

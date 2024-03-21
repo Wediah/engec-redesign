@@ -13,34 +13,29 @@ function Navbar() {
 
   return (
     <>
-      <div className="w-full z-20 h-10 pt-2 bg-transparent sticky">
+      <div className="w-full z-20 h-12 py-2 bg-black sticky">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <h1 className='font-medium'>
                 <Link href="/">
-                    <p>ENGEC GROUP</p>
+                    <p className='text-white'>ENGEC GROUP</p>
                 </Link>
             </h1>
 
             <ul className="hidden md:flex gap-x-4 font-medium text-white relative z-0">
-                <li className='hover:bg-gray-200  p-1 rounded-md flex-1'>
-                    <Link className={`link ${pathname === '/' ? 'active' : 'bg-gray-200'}`} href="/">
-                        <p>HOME</p>
-                    </Link>
-                </li>
-                <li className='hover:bg-gray-200   p-1 rounded-md flex-1'>
+                <li className='hover:underline underline-offset-2 '>
                     <Link className={`link ${pathname === '/about' ? 'active' : 'bg-blue-200'}`} href="/about">
-                        <p>ABOUT</p>
+                        <p>ABOUT US</p>
                     </Link>
                 </li>
-                <li className='active:bg-gray-200 focus:bg-gray-200 hover:bg-gray-200  p-1 rounded-md flex-1'>
+                <li className='active:bg-gray-200 focus:bg-gray-200 hover:underline underline-offset-2'>
                     <Link href="/projects">
-                        <p>PROJECTS</p>
+                        <p>OUR PROJECTS</p>
                     </Link>
                 </li>
-                <li className='active:bg-gray-200 focus:bg-gray-200 hover:bg-gray-200  p-1 rounded-md flex-1'>
+                <li className='active:bg-gray-200 focus:bg-gray-200 hover:underline underline-offset-2'>
                     <Link href="/contact">
-                        <p>CONTACT</p>
+                        <p>CONTACT US</p>
                     </Link>
                 </li>
               
@@ -54,7 +49,7 @@ function Navbar() {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type="button"
-                            className=" inline-flex items-center justify-center p-2 rounded-md text-black  dark:text-white font-bold hover:text-yellow-300 focus:outline-none "
+                            className=" inline-flex items-center justify-center p-2 rounded-md text-white font-bold hover:text-yellow-300 focus:outline-none "
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                         > 
