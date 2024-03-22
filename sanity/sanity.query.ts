@@ -16,3 +16,13 @@ export async function getAllProjects() {
     }`
     );
 }
+
+export async function Reviews() {
+  return client.fetch(
+    groq`
+    *[_type == "reviews"]{ 
+        title, 
+        description,
+    }`
+    );
+}

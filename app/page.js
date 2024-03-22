@@ -3,11 +3,10 @@ import Image from "next/image";
 import { Raleway_Dots } from "next/font/google";
 import Marquee from "react-fast-marquee";
 import { getAllProjects } from "../sanity/sanity.query";
-import { useNextSanityImage } from "next-sanity-image";
-import { Reviews } from "../sanity/sanity1.query"
 import React from "react";
 import  ImageUrlBuilder  from "@sanity/image-url";
 import { client, urlFor } from "../sanity/lib/client"
+import Review from "./components/review";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
@@ -22,7 +21,6 @@ const builder = ImageUrlBuilder(client);
 
 export default async function Home() {
   const projects = await getAllProjects();
-  const reviews = await Reviews();
   // const settings = {
   //   dots: true,
   //   infinite: true,
@@ -30,7 +28,6 @@ export default async function Home() {
   //   slidesToShow: 4,
   //   slidesToScroll: 4
   // }
-  console.log(reviews);
 
   return (
     <main className=" ">
@@ -97,14 +94,7 @@ export default async function Home() {
       
     </div>
 
-    <div className="bg-white">
-      <div className="px-4">
-      <h1 className="text-black text-center font-bold text-xl md:text-4xl">WHAT OUR CLIENTS SAY ABOUT US</h1>
-      </div>
-
     
-      
-    </div>
 
 
     </main>
