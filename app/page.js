@@ -53,7 +53,7 @@ export default async function Home() {
           <Image src="/Eastern2.webp" className="w-auto h-96 object-cover" width="160" height="1440"/>
         </div>
         <div className=" bg-gray-100 w-1/4 h-96 relative">
-          <a className="font-bold p-2 cursor-pointer hover:underline absolute bottom-0 left-0 right-0 pt-80 md:text-lg text-md">READ ABOUT US</a>
+          <a className="font-bold p-2 cursor-pointer hover:underline absolute bottom-0 left-0 right-0 pt-80 md:text-lg text-md" href="/about">READ ABOUT US</a>
         </div>
         
         <div className="w-1/4">
