@@ -12,9 +12,12 @@ async function Review() {
 
       <div className="text-black">
             <div className='bg-white'>
-              { reviews && reviews.map((review) => {
+              { reviews && reviews.map((review, index) => {
                     return (
-                        <h1 className="text-md font-bold text-black">{review.description}</h1>
+                        <div className="w-3/5 h-3/5 gap-2" key={index}>
+                        <p className="text-md font-bold text-black">{review.description}</p>
+                        <h1 className="text-md font-bold text-black">{review.name}</h1>
+                        </div>
                     )
                 })
               }
