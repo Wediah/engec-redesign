@@ -1,21 +1,16 @@
 import { groq } from 'next-sanity';
-import { client }  from './lib/client';
+import { client }  from './client';
 
-export async function getAllProjects() {
-  return client.fetch(
-    groq`
-    *[_type == "projects"]{ 
+export const Projects = groq`*[_type == "projects"]{ 
+        _id,
         title, 
         description, 
         ProjectImage {
-          asset->{
-            _id,
-            url
-          },
+          "image": asset->url,
+          "lqip": asset->metadata.lqip,
+          alt,
         },
-    }`
-    );
-}
+    }`;
 
 export async function Reviews() {
   return client.fetch(

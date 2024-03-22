@@ -2,11 +2,12 @@
 import Image from "next/image";
 import { Raleway_Dots } from "next/font/google";
 import Marquee from "react-fast-marquee";
-import { getAllProjects } from "../sanity/sanity.query";
+import { Projects } from "../sanity/lib/sanity.query";
 import React from "react";
 import  ImageUrlBuilder  from "@sanity/image-url";
 import { client, urlFor } from "../sanity/lib/client"
 import Review from "./components/review";
+import { sanityFetch } from "../sanity/lib/client";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from "react-slick";
@@ -16,11 +17,12 @@ const raleway = Raleway_Dots({
   subsets: ['latin']
 })
 
-const builder = ImageUrlBuilder(client);
-
 
 export default async function Home() {
-  const projects = await getAllProjects();
+  const projects = await sanityFetch({
+    query: Projects,
+    tags: ["projects"],
+  })
   // const settings = {
   //   dots: true,
   //   infinite: true,
@@ -79,8 +81,8 @@ export default async function Home() {
                             <div  className=' w-11/12 md:w-80 bg-gray-100'>
                                 <Image
                                   className="object-cover bg-black"
-                                  // src={urlFor(project.projectImage).url()}
-                                  alt={project.title}
+                                  // src={project.projectImage.image}
+                                  // alt={project.projectImage.alt}
                                 />
                                 <h1 className='text-2xl font-bold p-2'>{project.title}</h1>             
                             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Reviews } from "../../sanity/sanity.query"
+import { Reviews } from "../../sanity/lib/sanity.query"
 
 async function Review() {
     const reviews = await Reviews();
@@ -10,7 +10,7 @@ async function Review() {
       <h1 className="text-black text-center font-bold text-xl md:text-4xl">WHAT OUR CLIENTS SAY ABOUT US</h1>
       </div>
 
-      <div className=" h-96 bg-slate-400 text-black">
+      <div className="text-black">
             <div className='bg-white'>
               { reviews && reviews.map((review) => {
                     return (
